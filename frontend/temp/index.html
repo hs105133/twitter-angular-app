@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>My index</title>
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/angular-toastr.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- endinject -->
+</head>
+<body ng-controller="loginCtrl">
+<nav class="navbar navbar-default navbar-fixed-top">
+        <button ng-show="isAuthenticated()" ng-click="logout()" class="btn btn-link navbar-btn pull-right">Logout</button>       
+
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="post">Create Post</a></li>
+        <li><a ui-sref="posts">All Posts</a></li>
+      </ul>
+</nav>
+
+	<div class="container">
+  
+    <button ng-click="login()" ng-hide="isAuthenticated()" class="btn btn-primary">Login</button> 
+    
+    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"> 
+      <div ui-view class="mTop"></div>    
+    </div>
+  
+	 		  
+	</div>
+
+ 	
+  <!-- vendorInject:js -->
+  <script src="vendor/angular.js"></script>
+  <script src="vendor/satellizer.js"></script>
+  <script src="vendor/ui-bootstrap-tpls.js"></script>
+  <script src="vendor/angular-ui-router.js"></script>
+  <script src="vendor/angular-toastr.tpls.js"></script>
+  <script src="vendor/angular-animate.js"></script>
+  <!-- endinject -->
+  
+  <!-- inject:js -->
+  <script src="app.js"></script>
+  <script src="login.js"></script>
+  <script src="js/PostCtrl.js"></script>
+  <script src="js/PostsCtrl.js"></script>
+  <!-- endinject -->
+</body>
+</html>

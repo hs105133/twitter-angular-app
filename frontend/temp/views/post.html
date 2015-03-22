@@ -1,0 +1,23 @@
+<div class="well clearfix">
+  <h1>
+      <span ng-if="isEditing">Update Post</span>
+      <span ng-if="!isEditing">Create Post</span>
+    </h1>
+  <div class="form-group">
+    <textarea class="form-control" placeholder="tweet message" ng-model="message" rows="4"></textarea>
+  </div>
+  <p class="input-group">
+    <input type="text" class="form-control" datepicker-popup ng-model="date"  is-open="opened" min-date="minDate">
+    <span class="input-group-btn">
+      <button class="btn btn-default" ng-click="open($event)">
+        <i class="glyphicon glyphicon-calendar"></i>
+      </button>
+    </span>
+  </p>
+  <timepicker ng-model="time"></timepicker>   
+  <button ng-click="save()" class="btn btn-primary pull-right" ng-disabled="!date">
+      <span ng-if="isEditing">Update</span>
+      <span ng-if="!isEditing">Save</span>
+    </button> 
+  <button ng-click="deletePost()" class="btn btn-warning pull-right" ng-show="isEditing">Delete</button> 
+</div> 
