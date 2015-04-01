@@ -4,7 +4,6 @@
  * @description :: Server-side logic for managing posts
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
-var Twit = require('twit');
 
 module.exports = {
     tweet: function(req, res) {
