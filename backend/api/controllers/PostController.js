@@ -14,7 +14,8 @@ module.exports = {
             Post.create({
                 message: message,
                 datetime: datetime,
-                owner: req.userId
+                owner: req.userId,
+                isPosted: false
             }).exec(function(err, post){
                 res.json(post);
             });

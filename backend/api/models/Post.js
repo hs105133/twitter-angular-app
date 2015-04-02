@@ -12,7 +12,8 @@ module.exports = {
   	datetime: "datetime",
   	owner: { //whoever is making request
   		model: 'Users'
-  	}
+  	},
+  	isPosted: "boolean"
   }
 };
 
